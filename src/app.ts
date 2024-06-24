@@ -1,7 +1,30 @@
 // @ts-check
 
+class NCycle<T> {
+  public status: string = "stopped";
+  public make: T | T[];
+  public model: T | T[];
+  public wheels: T;
+
+  constructor(make: T | T[], model: T | T[], wheels: T) {
+    this.make = make;
+    this.model = model;
+    this.wheels = wheels;
+  }
+  start() {
+    this.status = "started";
+  }
+  stop() {
+    this.status = "stopped";
+  }
+
+  print(num: number = 0) {
+    if(!Array.isArray(this.make) && !Array.isArray(this.model) )
+  }
+}
+
 class Vehicle {
-  status = "stopped";
+  public status: string = "stopped";
   public make: string;
   public model: string;
   public wheels: number;

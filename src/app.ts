@@ -53,9 +53,10 @@ class NCycle<T> {
     }
   }
 }
+type Status = "stopped" | "started";
 
 class Vehicle {
-  public status: string = "stopped";
+  public status: Status;
   public make: string;
   public model: string;
   public wheels: number;
@@ -64,6 +65,7 @@ class Vehicle {
     this.make = make;
     this.model = model;
     this.wheels = wheels;
+    this.status = "stopped";
   }
   start() {
     this.status = "started";

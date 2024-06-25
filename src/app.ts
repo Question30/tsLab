@@ -21,14 +21,15 @@ class NCycle<T> {
   print(num: number = 0) {
     if (!Array.isArray(this.make) && !Array.isArray(this.model)) {
       console.log(`This is a ${this.make} ${this.model} NCycle.`);
-    } else if (Array.isArray(this.make) && Array.isArray(this.model)) {
-      if (this.make[num] != undefined && this.model[num] != undefined) {
-        console.log(
-          `This NCycle has a ${this.make[num]} ${this.model[num]} at ${num}`
-        );
-      } else {
-        console.log("This NCycle was not created properly");
-      }
+    } else if (
+      Array.isArray(this.make) &&
+      Array.isArray(this.model) &&
+      this.make[num] != undefined &&
+      this.model[num] != undefined
+    ) {
+      console.log(
+        `This NCycle has a ${this.make[num]} ${this.model[num]} at ${num}`
+      );
     } else {
       console.log("This NCycle was not created properly");
     }
